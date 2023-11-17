@@ -1,4 +1,4 @@
-# Instal·lació i ús d’entorns de desenvolupament
+# 2. Instal·lació i ús d’entorns de desenvolupament
 
 ## 1. Instal·lació d'un entorn de desenvolupament integrat (IDE)
 
@@ -254,3 +254,5 @@ Rendiment: Construcció més ràpida, especialment en projectes grans.
 Diversitat de llenguatges: A part de Java, suporta nombrosos llenguatges com Kotlin, Groovy, Scala, etc.
 Kotlin DSL: Si estàs treballant amb Kotlin, aquesta pot ser una raó natural per escollir Gradle.
 52
+
+[Torna a la presentació de l'assignatura](README.md)

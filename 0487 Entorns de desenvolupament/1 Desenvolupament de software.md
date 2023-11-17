@@ -1,4 +1,4 @@
-# Desenvolupament de programari
+# 1. Desenvolupament de programari
 
 ## Concepte de programa informàtic
 
@@ -344,3 +344,5 @@ Exemple d'estat de les tasques:
 - Fent / En desenvolupament: tasques en les quals s’està treballant actualment
 - Test / Testing: tasques completades, pendent de revisió o testatge.
 - Completes: tasques completades.
+
+[Torna a la presentació de l'assignatura](README.md)
