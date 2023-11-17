@@ -1,4 +1,4 @@
-# Instal·lació i configuració de sistemes ERP-CRM
+# 2. Instal·lació i configuració de sistemes ERP-CRM
 
 ## 1. Introducció a Docker
 
@@ -673,3 +673,5 @@ Exemples i Plantilles: Repositoris amb exemples de configuracions d'Odoo i Postg
 Desenvolupament d'un Cas d'Ús Personalitzat: Encoratjar els participants a desenvolupar el seu propi projecte utilitzant Odoo i Docker Compose.
 
 Presentació de Projectes: Sessió on els participants presenten els seus projectes i comparteixen aprenentatges.
+
+[Torna a la presentació de l'assignatura](README.md)
