@@ -6,9 +6,9 @@ Aquest repositori de GitHub és un recurs dedicat a la documentació de material
 
 Els continguts i l'estructura d'aquestes assignatures estan basats i regulats segons les següents normatives:
 
-- **Reial Decreto 450/2010 y Ordre EDU/2000/2010**: Defineixen el títol i currículum de Tècnic Superior en DAM.
-- **Reial Decreto 686/2010 y Ordre EDU/2887/2010**: Estableixen el títol i currículum de Tècnic Superior en DAW.
-- **Reial Decreto 405/2023**: Actualitza els títols i ensenyances de Tècnic Superior en DAM i DAW.
+- **Reial Decret 450/2010 i Ordre EDU/2000/2010**: Defineixen el títol i currículum de Tècnic Superior en DAM.
+- **Reial Decret 686/2010 i Ordre EDU/2887/2010**: Estableixen el títol i currículum de Tècnic Superior en DAW.
+- **Reial Decret 405/2023**: Actualitza els títols i ensenyances de Tècnic Superior en DAM i DAW.
 
 ## Assignatures Documentades
 
