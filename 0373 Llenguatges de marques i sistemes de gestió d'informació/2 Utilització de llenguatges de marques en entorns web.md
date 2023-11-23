@@ -2,13 +2,19 @@
 
 ## Llenguatges per a la visualització de informació
 
-En l'era digital actual, la informació es presenta i es consumeix predominantment a través de mitjans electrònics, com ara llocs web, aplicacions mòbils, publicacions digitals, entre d'altres. Per garantir que aquesta informació sigui accessible i comprensible per a l'usuari, s'utilitzen llenguatges de presentació.
+En l'era digital actual, la informació es presenta i es consumeix predominantment a través de mitjans electrònics, com ara llocs web, aplicacions mòbils, publicacions digitals, entre d'altres. Per garantir que aquesta informació sigui accessible i comprensible per a l'usuari, s'utilitzen llenguatges d'estructura i llenguatges de presentació.
 
-### Concepte de llenguatges de presentació
+Els **llenguatges d'estructura** són un tipus de llenguatges de marques utilitzats principalment en el desenvolupament web i en la creació de documents digitals per definir l'estructura i l'organització del contingut. Aquests llenguatges són fonamentals en la definició de com es disposen i s'organitzen les dades dins d'un document o una pàgina web, i juguen un paper crucial en la representació semàntica de la informació.
 
-Un llenguatge de presentació és un llenguatge utilitzat per descriure com s'ha de visualitzar o presentar la informació a l'usuari. Aquests llenguatges no determinen quina informació es mostra, sinó com es mostra. CSS (Cascading Style Sheets) és un exemple prevalent d'un llenguatge de presentació utilitzat en el desenvolupament web.
+Els llenguatges d'estructura proporcionen la base sobre la qual es construeixen experiències d'usuari riques i interactives. La seva capacitat per organitzar i estructurar el contingut de manera lògica i accessible els fa essencials en la creació de documents digitals eficients i en la facilitació de l'interoperabilitat entre diferents sistemes i aplicacions.
 
-### Necessitat dels llenguatges de presentació
+Els **llenguatges de presentació** són un tipus de llenguatges de marques o de programació utilitzats en el desenvolupament web i en altres entorns digitals per determinar com s'ha de visualitzar o estilitzar el contingut a l'usuari final. Aquests llenguatges es centren en l'aparença, l'estil i el disseny de la informació, permetent que els desenvolupadors i dissenyadors creïn experiències visuals atractives i funcionals en diferents plataformes i dispositius.
+
+Els llenguatges de presentació determinen com els usuaris perceben i interactuen amb el contingut digital. La seva capacitat per millorar l'aparença visual, la usabilitat i l'accessibilitat dels llocs web i aplicacions els converteix en eines essencials per a qualsevol desenvolupador o dissenyador que vulgui crear experiències d'usuari atractives i eficaces. La seva flexibilitat i potència permeten una ampla gamma de possibilitats creatives, des de llocs web bàsics fins a aplicacions web complexes i interactives.
+
+És a dir, mentre que els llenguatges d'estructura estableixen la base i l'organització d'un document o pàgina web, els llenguatges de presentació determinen com es presenta aquesta estructura a l'usuari final. La capacitat de separar l'estructura del disseny és una pràctica essencial en el desenvolupament web modern, ja que permet una major flexibilitat, mantenibilitat i accessibilitat en el disseny i la distribució de contingut digital.
+
+### Per què hi ha dos llenguatges de visualització de la informació?
 
 **Separació del contingut i la presentació**: Permet als desenvolupadors i dissenyadors treballar de manera independent i assegura que els canvis en el disseny no afectin el contingut subjacent o la lògica de negoci.
 
@@ -16,53 +22,25 @@ Un llenguatge de presentació és un llenguatge utilitzat per descriure com s'ha
 
 **Adaptabilitat**: A través de mètodes com les media queries en CSS, els llenguatges de presentació permeten la creació de dissenys responsius que s'adaptin a diferents mides de pantalla i dispositius.
 
-**Accessibilitat**: Amb els estils adequats, es pot garantir que la informació sigui accessible per a tots els usuaris, inclosos aquells amb discapacitats visuals o altres necessitats especials.
+**Accessibilitat i Usabilitat**: Aquests llenguatges faciliten la implementació de principis d'accessibilitat, assegurant que el contingut sigui accessible i usable per a tots els usuaris, inclosos aquells amb discapacitats.
+
+**Flexibilitat i Reutilització**: La utilització d'un llenguatge d'estructura facilita la reutilització del contingut i la seva adaptació a diferents contextos i formats, com ara la impressió, la visualització en dispositius mòbils o la presentació en diferents idiomes.
+
+**Estàndards i Compatibilitat**: Els llenguatges d'estructura sovint segueixen estàndards internacionals, la qual cosa garanteix una major compatibilitat i interoperabilitat entre diferents sistemes i aplicacions.
 
 ### Exemples de llenguatges de presentació
 
-**CSS**: Com s'ha esmentat anteriorment, CSS és el llenguatge de presentació estàndard per a la web. Controla aspectes com colors, tipografies, espaiat i més.
+**CSS (Cascading Style Sheets)**: És el llenguatge de presentació més utilitzat en el desenvolupament web. Permet controlar aspectes com el color, la tipografia, l'espaiat, les animacions, i més, en les pàgines web.
 
-**XSL**: Extensible Stylesheet Language, utilitzat principalment per transformar i presentar documents XML.
+**XSL (Extensible Stylesheet Language)**: Utilitzat principalment per transformar i presentar documents XML, permetent l'aplicació d'estils complexos i la conversió a formats com HTML o PDF.
 
-**TeX**: Un llenguatge de marcat ampliament utilitzat en la tipografia d'alta qualitat, especialment en matemàtiques, ciències i enginyeria.
+**TeX**: Un llenguatge de marques ampliament utilitzat en la tipografia d'alta qualitat, especialment en matemàtiques, ciències i enginyeria.
 
-### Diferència entre llenguatges d'estructura i de presentació
+### Exemples de llenguatges d'estructura
 
-En el món del desenvolupament i disseny web, es fa ús de diversos llenguatges amb finalitats específiques. D'aquests, dues categories predominants són els llenguatges d'estructura i els de presentació. Encara que estan estretament relacionats i sovint es complementen entre si, tenen funcions distintes.
+**HTML (Hypertext Markup Language)**: Utilitzat per estructurar contingut a la web, definint elements com paràgrafs, enllaços, imatges, llistes, etc.
 
-### Llenguatges d'estructura
-
-Definició: Els llenguatges d'estructura es fan servir per descriure l'estructura o l'esquelet d'una pàgina web o document. Defineixen com es disposen i organitzen les dades.
-
-Exemples:
-
-- **HTML (Hypertext Markup Language)**: Utilitzat per estructurar contingut a la web, definint elements com paràgrafs, enllaços, imatges, llistes, etc.
-- **XML (Extensible Markup Language)**: Un llenguatge de marcat que defineix un conjunt de regles per codificar documents de manera que tant humans com màquines puguin llegir-les.
-
-Característiques:
-
-- No estan orientats a l'aparença visual.
-- Determinen l'ordre i la jerarquia del contingut.
-- Es poden comparar amb l'estructura d'un edifici, on es defineixen les parets, les habitacions i la disposició general.
-
-### Llenguatges de presentació
-
-Definició: Els llenguatges de presentació descriuen com s'ha de mostrar o estilitzar el contingut. No afecten l'estructura subjacent, sinó que determinen com es veurà i se sentirà per a l'usuari.
-
-Exemples:
-
-- **CSS (Cascading Style Sheets)**: El llenguatge estàndard per estilitzar pàgines web, controlant aspectes com colors, tipografies, espaiat i més.
-- **XSL (Extensible Stylesheet Language)**: Utilitzat per estilitzar i transformar documents XML.
-
-Característiques:
-
-- Centrats en l'aparença visual i l'experiència de l'usuari.
-- Permeten la separació del contingut i el disseny, possibilitant dissenys reutilitzables i temes canviants.
-- Poden ser comparats amb la decoració d'un edifici, incloent-hi la pintura, el mobiliari i la il·luminació.
-
-### Diferències
-
-Mentre que els llenguatges d'estructura estableixen la base i l'organització d'un document o pàgina web, els llenguatges de presentació determinen com es presenta aquesta estructura a l'usuari final. La capacitat de separar l'estructura del disseny és una pràctica essencial en el desenvolupament web modern, ja que permet una major flexibilitat, mantenibilitat i accessibilitat en el disseny i la distribució de contingut digital.
+**XML (Extensible Markup Language)**: Un llenguatge de marcat que defineix un conjunt de regles per codificar documents de manera que tant humans com màquines puguin llegir-les.
 
 ## Llenguatges d'estructura
 
