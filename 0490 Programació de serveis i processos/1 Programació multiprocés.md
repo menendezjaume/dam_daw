@@ -1,49 +1,58 @@
 # 1. Programació multiprocés
 
 Un cuiner que tingui intenció de fer un plat molt elaborat, amb salses i guarnicions diferents, probablement farà servir diferents paelles per cuinar cada element que necessiti utilitzar per elaborar el plat. Tindrà una paella amb la salsa, una altra preparant la guarnició i en una altra cuinarà el plat principal. Tot això ho farà alhora i, finalment, quan acabi totes aquestes tasques les ajuntarà en un únic plat.
+
 Aquesta analogia ens serveix per introduir el terme multiprocés. El cuiner està executant diferents processos a la vegada: cuina la salsa, la guarnició i el plat principal, seguint un ordre d’execució per arribar a un resultat que esperava, un bon plat.
 
 ## Procés, sistemes monoprocessador-multiprocessador
 
 Un programa és un element estàtic, un conjunt d’instruccions, unes línies de codi escrites en un llenguatge de programació, que descriuen el tractament que cal donar a unes dades inicials (d’entrada) per aconseguir el resultat esperat (una sortida concreta).
+
 En canvi, un procés és dinàmic, és una instància d’un programa en execució, que realitza els canvis indicats pel programa a les dades inicials i obté una sortida concreta. El procés, a més de les instruccions, requerirà també de recursos específics per a l’execució com ara el comptador d’instruccions del programa, el contingut dels registres o les dades.
 
 El sistema operatiu és l’encarregat de la gestió de processos. Els crea, els elimina i els proveeix d’instruments que en permetin l’execució i també la comunicació entre ells.
+
 Quan s’executa un programa, el sistema operatiu crea una instància del programa: el procés. Si el programa es tornés a executar es crearia una nova instància totalment independent a l’anterior (un nou procés) amb les seves pròpies variables, piles i registres.
 
 Imaginem un ordinador en el qual tenim instal·lat un programa d’edició de text. Posem per cas que volem escriure diversos textos a la vegada executant l’editor.
+
 Cada instància del programa és un procés totalment independent als altres. Cada procés té unes dades d’entrada i per tant diferents sortides. A cada editor (el procés) s’escriurà el seu text.
 
-![Processos](imatges/1%20processos.png)
+![Processos](imatges/1_1%20processos.png)
 
 Un sistema monoprocessador és aquell que està format únicament per un processador.
+
 Un sistema multiprocessador està format per més d’un processador.
 
-![Placa](imatges/2%20placa.png)
+![Placa](imatges/1_2%20placa.png)
 
 ## Programació concurrent
 
 De forma genèrica anomenarem els processos que s’executin a la vegada, ja sigui de forma real o simulada, processos concurrents.
+
 L’execució de processos concurrents, encara que sigui de forma simulada, fa augmentar el rendiment del sistema informàtic ja que aprofita més el temps del processador. És el sistema operatiu l’encarregat de gestionar l’execució concurrent de diferents processos contra un mateix processador.
 
-![Programació concurrent](imatges/3%20programacio%20concurrent.png)
+![Programació concurrent](imatges/1_3%20programacio%20concurrent.png)
 
 ## Programació paral·lela
 
 Quan la programació concurrent es realitza en un sistema multiprocessador parlem de programació paral·lela.
 
 El principal desavantatge de la programació paral·lela són els controls que hem d’afegir per tal que la comunicació i sincronització dels processos que s’executen concurrentment siguin correctes.
+
 Dos processos s’han de sincronitzar o comunicar quan un procés necessita alguna dada que està processant l’altre o bé un d’ells ha d’esperar la finalització de l’altre per poder continuar la seva execució.
 
-![Programació paralela](imatges/4%20programacio%20paralela.png)
+![Programació paralela](imatges/1_4%20programacio%20paralela.png)
 
 ## Programació distribuïda
 
 Un tipus especial de programació paral·lela és l’anomenada programació distribuïda. Aquesta programació es dona en sistemes informàtics distribuïts.
+
 Un sistema distribuït està format per un conjunt d’ordinadors que poden estar situats en llocs geogràfics diferents units entre ells a través d’una xarxa de comunicacions.
+
 Un exemple de sistema distribuït pot ser el d’un banc amb moltes oficines al món, amb un ordinador central per oficina per guardar els comptes locals i fer les transaccions locals. Aquest ordinador es pot comunicar amb els altres ordinadors centrals de la xarxa d’oficines. Quan es fa una transacció no importa on es troba el compte o el client.
 
-![Programació distribuïda](imatges/5%20programacio%20distribuida.png)
+![Programació distribuïda](imatges/1_5%20programacio%20distribuida.png)
 
 ## Processos i serveis
 
@@ -69,7 +78,7 @@ En canvi, ni la creació de fils ni la comunicació consumeixen gaire temps de p
 
 Procés amb un únic fil en execució i procés amb diversos fils en execució
 
-![Fils i processos](imatges/6%20fils%20i%20processos.png)
+![Fils i processos](imatges/1_6%20fils%20i%20processos.png)
 
 ## Gestió de processos
 
@@ -79,7 +88,7 @@ Tots els sistemes operatius disposen d’un planificador de processos encarregat
 
 ## Estats d’un procés
 
-![Estats d'un procés](imatges/7%20estats%20proces.png)
+![Estats d'un procés](imatges/1_7%20estats%20proces.png)
 
 ## Arbre de processos
 
