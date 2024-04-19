@@ -123,16 +123,22 @@ Primer de tot, que la relació entre possibles entrades i sortides sigui bijecti
 
 D’altra banda, **no ha de ser reversible**. A partir només d’un resultat, ha de ser pràcticament impossible endevinar quina ha estat l’entrada original que l’ha generat.
 
-En l’actualitat, hi ha diversos algorismes de hash. Tot i així, el més utilitzat avui en dia, i el que es considera un estàndard, és l’algorisme SHA-256 (Secure Hash Algoritm, o Algorisme Segur de Hash). Aquest, a partir d’una entrada de dades de mida arbitrària, genera un resultat de 256 bits.
+En l’actualitat, hi ha diversos algorismes de hash. Tot i així, el més utilitzat avui en dia, i el que es considera un estàndard, és l’algorisme **SHA-256** (Secure Hash Algoritm, o Algorisme Segur de Hash). Aquest, a partir d’una entrada de dades de mida arbitrària, genera un resultat de 256 bits.
+
 Si es desitja una sortida de més longitud, existeix una versió millorada, més segura, tot i que no tan popular: el SHA-3, una nova versió encara millor i més segura.
+
 El SHA-1, tot i que encara s’utilitza, no està recomanat, ja que s’ha demostrat senzill de rompre.
+
 L’MD5, està completament romput i no recomanat.
+
 Funció de hash (cont.)
 
 Farem servir la classe MessageDigest.
 
 A continuació, serà necessari transformar aquest array de bytes a un String amb format hexadecimal.
+
 Funció de hash a Java
+
 MessageDigest md = MessageDigest.getInstance("SHA-256");
 byte[] hash = md.digest(palabra.getBytes());
 
