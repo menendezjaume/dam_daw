@@ -31,7 +31,7 @@ Un sistema secret actual està definit per dues funcions:
 
 La clau és el paràmetre que especifica una transformació concreta dins de totes les possibles substitucions que es podrien realitzar amb la funció de xifrat.
 
-![Estructura d'un sistema secret](imatges/5_1%20sistema%20secret.png)
+![Estructura d'un sistema secret](../img/5_1%20sistema%20secret.png)
 
 ## Tipus de sistemes de xifrat
 
@@ -70,7 +70,7 @@ Aquest algoritme va ser creat per Joan Daemen i Vincent Rijmen i va guanyar el s
 
 Tot i així, cal tenir en compte que existeixen altres algorismes que encara estan en ús. Per exemple, l’anterior estàndard, el **DES** (Data Encryption Standrard) o el **TripleDES**.
 
-![Sistema de xifrat simètric](imatges/5_2%20xifrat%20simetric.png)
+![Sistema de xifrat simètric](../img/5_2%20xifrat%20simetric.png)
 
 ### Generació de claus simètriques
 
@@ -190,6 +190,6 @@ Aquests serveis, si es contemplen tots tres junts, són els que us permeten dur 
 També permeten garantir que si s’emmagatzema un document a un ordinador, ningú l’haurà modificat quan es torni a obrir sense que la manipulació no es faci patent.
 La firma digital és el mecanisme criptogràfic que trasllada totes les propietats de la firma manuscrita del món físic a la informació en format digital.
 
-![Firma digital](imatges/5_5%20firma%20digital.png)
+![Firma digital](../img/5_5%20firma%20digital.png)
 
 [Torna a la presentació de l'assignatura](README.md)

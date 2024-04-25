@@ -14,7 +14,7 @@ Concurrença vs Paral·lelisme: La concurrença es refereix a la capacitat d'un 
 
 ## És a dir…
 
-![Fils](imatges/2_1%20fils.png)
+![Fils](../img/2_1%20fils.png)
 
 ## Diferència entre fils i processos
 
@@ -65,7 +65,7 @@ Aquest són els estats d'un fil:
 * **TIMED_WAITING**: Està esperant per una altra acció durant un temps determinat.
 * **TERMINATED**: El fil ha finalitzat la seva execució.
 
-![Estats d'un fil](imatges/2_2%20estats%20fils.png)
+![Estats d'un fil](../img/2_2%20estats%20fils.png)
 
 ## Recursos compartits pels fils
 
@@ -78,7 +78,7 @@ Dins d'un procés, els fils comparteixen diversos recursos:
 
 Tot i que aquests recursos compartits permeten una ràpida i eficient comunicació entre fils, també introdueixen desafiaments en termes de sincronització i condicions de carrera.
 
-![Esquema visual de recursos compartits pels fils](imatges/2_3%20esquema%20recursos%20compartits.png)
+![Esquema visual de recursos compartits pels fils](../img/2_3%20esquema%20recursos%20compartits.png)
 
 ## Fils en Java
 

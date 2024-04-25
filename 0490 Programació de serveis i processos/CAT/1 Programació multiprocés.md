@@ -18,13 +18,13 @@ Imaginem un ordinador en el qual tenim instal·lat un programa d’edició de te
 
 Cada instància del programa és un procés totalment independent als altres. Cada procés té unes dades d’entrada i per tant diferents sortides. A cada editor (el procés) s’escriurà el seu text.
 
-![Processos](imatges/1_1%20processos.png)
+![Processos](../img/1_1%20processos.png)
 
 Un sistema monoprocessador és aquell que està format únicament per un processador.
 
 Un sistema multiprocessador està format per més d’un processador.
 
-![Placa](imatges/1_2%20placa.png)
+![Placa](../img/1_2%20placa.png)
 
 ## Programació concurrent
 
@@ -32,7 +32,7 @@ De forma genèrica anomenarem els processos que s’executin a la vegada, ja sig
 
 L’execució de processos concurrents, encara que sigui de forma simulada, fa augmentar el rendiment del sistema informàtic ja que aprofita més el temps del processador. És el sistema operatiu l’encarregat de gestionar l’execució concurrent de diferents processos contra un mateix processador.
 
-![Programació concurrent](imatges/1_3%20programacio%20concurrent.png)
+![Programació concurrent](../img/1_3%20programacio%20concurrent.png)
 
 ## Programació paral·lela
 
@@ -42,7 +42,7 @@ El principal desavantatge de la programació paral·lela són els controls que h
 
 Dos processos s’han de sincronitzar o comunicar quan un procés necessita alguna dada que està processant l’altre o bé un d’ells ha d’esperar la finalització de l’altre per poder continuar la seva execució.
 
-![Programació paralela](imatges/1_4%20programacio%20paralela.png)
+![Programació paralela](../img/1_4%20programacio%20paralela.png)
 
 ## Programació distribuïda
 
@@ -52,7 +52,7 @@ Un sistema distribuït està format per un conjunt d’ordinadors que poden esta
 
 Un exemple de sistema distribuït pot ser el d’un banc amb moltes oficines al món, amb un ordinador central per oficina per guardar els comptes locals i fer les transaccions locals. Aquest ordinador es pot comunicar amb els altres ordinadors centrals de la xarxa d’oficines. Quan es fa una transacció no importa on es troba el compte o el client.
 
-![Programació distribuïda](imatges/1_5%20programacio%20distribuida.png)
+![Programació distribuïda](../img/1_5%20programacio%20distribuida.png)
 
 ## Processos i serveis
 
@@ -78,7 +78,7 @@ En canvi, ni la creació de fils ni la comunicació consumeixen gaire temps de p
 
 Procés amb un únic fil en execució i procés amb diversos fils en execució
 
-![Fils i processos](imatges/1_6%20fils%20i%20processos.png)
+![Fils i processos](../img/1_6%20fils%20i%20processos.png)
 
 ## Gestió de processos
 
@@ -88,7 +88,7 @@ Tots els sistemes operatius disposen d’un planificador de processos encarregat
 
 ## Estats d’un procés
 
-![Estats d'un procés](imatges/1_7%20estats%20proces.png)
+![Estats d'un procés](../img/1_7%20estats%20proces.png)
 
 ## Arbre de processos
 

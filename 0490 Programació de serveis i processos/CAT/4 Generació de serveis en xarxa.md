@@ -144,7 +144,7 @@ IMAP és un protocol més modern i flexible per a la recepció de correus electr
 
 ## 5. Servei WWW
 
-El Servei WWW, o World Wide Web, és un sistema de documents d'hipertext interconnectats accessibles a través d'Internet. Utilitzant navegadors web, els usuaris poden veure pàgines web que poden contenir text, imatges, vídeos i altres multimèdia, i navegar entre elles mitjançant hiperenllaços.
+El Servei WWW, o World Wide Web, és un sistema de documents d'hipertext interconnectats accessibles a través d'Internet. Utilitzant navegadors web, els usuaris poden veure pàgines web que poden contenir text, ../img, vídeos i altres multimèdia, i navegar entre elles mitjançant hiperenllaços.
 
 Aquesta secció explora el funcionament dels serveis web, incloent el protocol HTTP/HTTPS, la naturalesa sense estat del web, i la seva importància en l'arquitectura moderna d'aplicacions.
 
@@ -152,7 +152,7 @@ Aquesta secció explora el funcionament dels serveis web, incloent el protocol H
 
 HTTP (Hypertext Transfer Protocol) és el protocol fonamental utilitzat en la transferència de dades del World Wide Web. Defineix com els missatges són formats i transmesos, i com els servidors web i els navegadors han de respondre a aquestes sol·licituds.
 
-**Funcionament del HTTP**: Quan un usuari accedeix a una pàgina web, el seu navegador envia una sol·licitud HTTP al servidor on s'allotja la pàgina. El servidor, després de processar la sol·licitud, envia una resposta HTTP de tornada al navegador, que pot incloure el contingut de la pàgina web (com ara HTML, CSS, imatges).
+**Funcionament del HTTP**: Quan un usuari accedeix a una pàgina web, el seu navegador envia una sol·licitud HTTP al servidor on s'allotja la pàgina. El servidor, després de processar la sol·licitud, envia una resposta HTTP de tornada al navegador, que pot incloure el contingut de la pàgina web (com ara HTML, CSS, ../img).
 
 **HTTPS (HTTP Secure)**: És la versió segura d'HTTP, on les comunicacions són xifrades mitjançant protocols com SSL/TLS. Això proporciona una capa addicional de seguretat, assegurant que la informació enviada i rebuda no pugui ser fàcilment interceptada o manipulada.
 
@@ -184,7 +184,7 @@ La programació d'aplicacions client implica el desenvolupament d'aplicacions qu
 
 **Creació de Sol·licituds**: El client ha de ser capaç de construir sol·licituds ben formades. Això inclou no només l'adreça del recurs sinó també capçaleres adequades, paràmetres i, en el cas de sol·licituds POST o PUT en una API REST, un cos de missatge.
 
-**Gestió de Respostes**: Una vegada enviada la sol·licitud, el client ha d'estar preparat per processar la resposta. Això pot incloure la interpretació de codis d'estat HTTP, l'anàlisi de dades JSON o XML, i la gestió de dades binàries com imatges o arxius.
+**Gestió de Respostes**: Una vegada enviada la sol·licitud, el client ha d'estar preparat per processar la resposta. Això pot incloure la interpretació de codis d'estat HTTP, l'anàlisi de dades JSON o XML, i la gestió de dades binàries com ../img o arxius.
 
 ### Maneig d'Errors
 

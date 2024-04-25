@@ -17,7 +17,7 @@ En el procés de comunicació es distingeix:
 
 ### Procés de comunicació
 
-![Procés de comunicació](imatges/3_1%20proces%20comunicacio.png)
+![Procés de comunicació](../img/3_1%20proces%20comunicacio.png)
 
 ### Conceptes Bàsics
 
@@ -47,7 +47,7 @@ En la comunicació en xarxa, generalment es parla de dos rols principals: client
 
 #### Arquitectura client-servidor
 
-![Arquitectura client-servidor](imatges/3_2%20arquitectura%20client%20servidor.png)
+![Arquitectura client-servidor](../img/3_2%20arquitectura%20client%20servidor.png)
 
 ### Comunicacions en grup
 
@@ -63,7 +63,7 @@ Els missatges es transmeten mitjançant radiat.
 
 #### Arquitectura de grup
 
-![Arquitectura de grup](imatges/3_3%20arquitectura%20grup.png)
+![Arquitectura de grup](../img/3_3%20arquitectura%20grup.png)
 
 ### Models híbrids
 
@@ -85,7 +85,7 @@ Si roman a la xarxa P2P, amb el temps aquest mateix client pot fer al seu torn d
 
 #### Arquitectura peer-to-peer
 
-![Arquitectura peer-to-peer](imatges/3_4%20arquitectura%20peer%20to%20peer.png)
+![Arquitectura peer-to-peer](../img/3_4%20arquitectura%20peer%20to%20peer.png)
 
 ## 3. Bases de la comunicació entre aplicacions
 
@@ -112,7 +112,7 @@ Ja hem xerrat de protocols, però uns exemples són:
 
 ### Pila de protocols TCP/IP
 
-![Pila de protocols TCP/IP](imatges/3_5%20pila%20tcp%20ip.png)
+![Pila de protocols TCP/IP](../img/3_5%20pila%20tcp%20ip.png)
 
 Font: <https://es.wikipedia.org/wiki/Familia_de_protocolos_de_internet>
 
@@ -172,7 +172,7 @@ Un client en Java pot utilitzar la classe Socket per connectar-se a un servidor 
 Socket conexion = new Socket("hostname", port); // Connectar-se al servidor
 ```
 
-![Sockets](imatges/3_6%20sockets.png)
+![Sockets](../img/3_6%20sockets.png)
 
 ### Multicast Sockets en Java
 
