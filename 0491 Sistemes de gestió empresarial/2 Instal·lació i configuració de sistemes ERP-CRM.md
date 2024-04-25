@@ -38,13 +38,13 @@ Docker Hub és un servei basat en la núvol que permet a usuaris i empreses comp
 
 Podem cercar imatges disponibles en Docker Hub, descarregar-les al nostre sistema local i utilitzar-les per crear contenidors. També és possible pujar les nostres pròpies imatges personalitzades al Docker Hub per a compartir-les amb altres.
 
-### 1.2. Instal·lació i configuració de docker
+### 1.2. Instal·lació i configuració de Docker
 
 Seguirem la documentació oficial per tal d'instal·lar Docker Engine: [Install Docker Engine](https://docs.docker.com/engine/install/)
 
 Recorda visitar [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/), la secció `Manage Docker as a non-root user`, per tal de poder executar Docker sense fer servir un usuari privilegiat.
 
-### 1.3. Primeros passos amb docker
+### 1.3. Primers passos amb Docker
 
 #### Què són els Dockerfiles?
 
@@ -69,21 +69,59 @@ CMD ["apache2ctl", "-D", "FOREGROUND"]
 
 Aquest Dockerfile inicia amb una imatge base d'Ubuntu, instal·la Apache i configura el contenidor per executar Apache en primer pla.
 
-#### Comandaments bàsics de docker
+#### Exemple d'un Dockerfile més complex
 
-`docker run`: Com executar un container.
+```Dockerfile
+# Utilitza una imatge base oficial de Python
+FROM python:3.8-slim
 
-`docker ps`: Com veure els containers en execució.
+# Estableix el directori de treball dins del contenidor
+WORKDIR /app
 
-`docker stop`: Aturar un container.
+# Instal·la paquets necessaris
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    && rm -rf /var/lib/apt/lists/*
 
-`docker rm` i `docker rmi`: Eliminar containers i imatges.
+# Copia l'arxiu requirements.txt al contenidor
+COPY requirements.txt /app/requirements.txt
+
+# Instal·la les dependències de Python
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Afegeix altres arxius al directori de treball
+ADD . /app
+
+# Comanda per defecte quan s'inicia el contenidor
+CMD ["python", "app.py"]
+```
+
+Explicació de cada instrucció:
+
+- `FROM`: Estableix la imatge base (en aquest cas, una versió de Python).
+- `WORKDIR`: Defineix el directori de treball dins del contenidor.
+- `RUN`: Executa comandes dins del contenidor. Aquí s'utilitza per actualitzar el llistat de paquets i instal·lar dependències.
+- `COPY`: Copia fitxers des del directori actual (on es troba el `Dockerfile`) al contenidor.
+- `ADD`: Similar a `COPY`, però pot utilitzar-se per afegir fitxers des de URL i descomprimir arxius en el destí.
+- `CMD`: Defineix la comanda que s'executarà per defecte quan s'inicia el contenidor. En aquest cas, executa un script de Python.
+
+#### Comandaments bàsics de Docker
+
+`docker run`: Com executar un contenidor.
+
+`docker container ls`: Com llistar tots els contenidors de Docker que estan actualment en execució en el teu sistema.
+
+`docker image ls`: Com llistar totes les imatges de Docker disponibles localment en el teu sistema.
+
+`docker stop`: Aturar un contenidor.
+
+`docker rm` i `docker rmi`: Eliminar contenidors i imatges.
 
 #### Executar un contenidor simple
 
 **Comandament:** `docker run hello-world`
 
-**Descripció:** Aquest comandament executa un contenidor a partir de la imatge `hello-world`. Si l'imatge no es troba en el sistema local, Docker la descarrega automàticament de Docker Hub. Aquesta imatge és una eina de prova bàsica per confirmar que Docker està instal·lat correctament i que pot crear contenidors.
+**Descripció:** Aquest comandament executa un contenidor a partir de la imatge `hello-world`. Si la imatge no es troba en el sistema local, Docker la descarrega automàticament de Docker Hub. Aquesta imatge és una eina de prova bàsica per confirmar que Docker està instal·lat correctament i que pot crear contenidors.
 
 **Resultat:** El contenidor imprimeix un missatge en la línia de comandes confirmant que la seva execució ha estat exitosa.
 
@@ -91,28 +129,35 @@ Aquest Dockerfile inicia amb una imatge base d'Ubuntu, instal·la Apache i confi
 
 **Comandament:** `docker run -d -p 80:80 nginx`
 
-**Descripció:** Aquest comandament descarrega (si és necessari) i executa un contenidor amb l'imatge `nginx`, un servidor web popular. L'opció -d executa el contenidor en segon pla (desacoplat), i `-p 80:80` mapeja el port 80 del contenidor al port 80 de l'amfitrió.
+**Descripció:** Aquest comandament descarrega (si és necessari) i executa un contenidor amb la imatge `nginx`, un servidor web popular. L'opció -d executa el contenidor en segon pla (desacoplat), i `-p 80:80` mapeja el port 80 del contenidor al port 80 de l'amfitrió.
 
 **Resultat:** Un cop executat, es pot accedir a un servidor web Nginx funcionant accedint a http://localhost des del navegador.
 
-#### Llistar Contenidors amb docker ps
+#### Llistar contenidors
 
-**Comandament:** `docker ps`
+**Comandament:** `docker container ls`
 
-**Descripció:** Aquest comandament llista tots els contenidors en execució, mostrant detalls com ID
-del contenidor, imatge utilitzada, temps de funcionament, ports i noms. Per veure tots els contenidors, inclosos els aturats, s'utilitza `docker ps -a`.
+**Descripció:** Aquest comandament llista tots els contenidors en execució, mostrant detalls com ID del contenidor, imatge utilitzada, temps de funcionament, ports i noms. Per veure tots els contenidors, inclosos els aturats, s'utilitza `docker container ls -a`.
 
 **Resultat:** Es proporciona una visió general dels contenidors actius en el sistema.
 
-#### Detalls del Contenidor amb docker inspect
+#### Llistar imatges
+
+**Comandament:** `docker image ls`
+
+**Descripció:** Aquest comandament mostra només les imatges de Docker que estan actualment en ús o que s'han utilitzat recentment. Per mostrar totes les imatges disponibles en el sistema, incloent-hi les imatges intermèdies que es van crear durant la construcció d'imatges, s'utilitza `docker image ls -a`. Aquesta opció inclou totes les imatges, tant les utilitzades com les no utilitzades, proporcionant una vista completa de totes les imatges de Docker emmagatzemades localment.
+
+**Resultat:** Es proporciona una visió general de les imatges en el sistema.
+
+#### Detalls del contenidor
 
 **Comandament:** `docker inspect [CONTAINER_ID]`
 
-**Descripció:** Es pot utilitzar aquest comandament per obtenir informació detallada sobre un contenidor específic, incloent la seva configuració, estat, xarxa, volums, etc.
+**Descripció:** Es pot utilitzar aquest comandament per obtenir informació detallada sobre un contenidor específic, incloent-hi la seva configuració, estat, xarxa, volums, etc.
 
-**Resultat:** S'obté una sortida detallada en format JSON que proporciona una visió profunda dels internals del contenidor.
+**Resultat:** S'obté una sortida detallada en format JSON que proporciona una visió profunda de la configuració interna del contenidor.
 
-#### Aturar un Contenidor
+#### Aturar un contenidor
 
 **Comandament:** `docker stop [CONTAINER_ID]`
 
@@ -120,7 +165,7 @@ del contenidor, imatge utilitzada, temps de funcionament, ports i noms. Per veur
 
 **Resultat:** El contenidor s'atura, però es manté en el sistema i es pot reiniciar.
 
-#### Eliminar un Contenidor
+#### Eliminar un contenidor
 
 **Comandament:** `docker rm [CONTAINER_ID]`
 
@@ -128,7 +173,7 @@ del contenidor, imatge utilitzada, temps de funcionament, ports i noms. Per veur
 
 **Resultat:** El contenidor s'elimina, alliberant espai i recursos.
 
-#### Executar un Comandament dins d'un Contenidor
+#### Executar un comandament dins d'un contenidor
 
 **Comandament:** `docker exec -it [CONTAINER_ID] bash`
 
@@ -136,21 +181,21 @@ del contenidor, imatge utilitzada, temps de funcionament, ports i noms. Per veur
 
 **Resultat:** S'obre un shell dins del contenidor, permetent l'execució de comandaments directament dins del seu entorn.
 
-#### Eliminar Contenidors Aturats
+#### Eliminar contenidors aturats
 
 **Comandament:** `docker container prune`
 
 **Descripció:** Aquest comandament elimina tots els contenidors aturats, ajudant a mantenir el sistema net i alliberant espai en disc.
 
-**Comandament:** Utilitzar aquest comandament després d'aturar i revisar contenidors no necessaris.
+**Resultat:** Utilitzar aquest comandament després d'aturar i revisar contenidors no necessaris els eliminarà del sistema.
 
-#### Eliminar Imatges No Utilitzades
+#### Eliminar imatges no utilitzades
 
-**Comandament:** `docker image prune`
+Comandament: `docker image prune`
 
-**Descripció:** Similar a `docker container prune`, aquest comandament elimina les imatges que no estan associades amb cap contenidor, alliberant encara més espai.
+Descripció: Similar a `docker container prune`, aquest comandament elimina les imatges que no estan associades amb cap contenidor, alliberant encara més espai.
 
-**Comandament:** Executar aquest comandament per eliminar imatges obsoletes o innecessàries.
+Resultat: Aquest comandament eliminarà imatges obsoletes o innecessàries.
 
 ### 1.4. Conceptes avançats
 
@@ -258,7 +303,7 @@ networks:
   webnet:
 ```
 
-Aquest fitxer defineix dos serveis: `web` (utilitzant l'imatge `nginx`) i `database` (utilitzant l'imatge `postgres`). També defineix una xarxa anomenada `webnet` que connecta els dos serveis.
+Aquest fitxer defineix dos serveis: `web` (utilitzant la imatge `nginx`) i `database` (utilitzant la imatge `postgres`). També defineix una xarxa anomenada `webnet` que connecta els dos serveis.
 
 #### Definició de serveis en `docker-compose.yml`
 
@@ -445,7 +490,7 @@ Docker Compose permet actualitzar serveis sense necessitat d'aturar tota l'aplic
 
 **Exemple Pràctic**: Si has fet canvis en el fitxer `docker-compose.yml` o necessites actualitzar una imatge a la seva última versió, pots utilitzar `docker-compose up -d`. Això recrearà els serveis que han canviat, mantenint els que no han estat modificats.
 
-**Reconstrucció de Contenidors**: En el cas que hagis modificat un Dockerfile i necessitis reconstruir l'imatge, pots utilitzar `docker-compose up -d --build`. Això assegurarà que els serveis amb imatges reconstruïdes siguin actualitzats.
+**Reconstrucció de Contenidors**: En el cas que hagis modificat un Dockerfile i necessitis reconstruir la imatge, pots utilitzar `docker-compose up -d --build`. Això assegurarà que els serveis amb imatges reconstruïdes siguin actualitzats.
 
 ## 3. Projecte Pràctic: Instal·lació d'Odoo amb Docker Compose
 
@@ -465,7 +510,7 @@ Odoo és una suite integral d'aplicacions empresarials (ERP) que inclou mòduls 
 
 Per funcionar eficaçment, Odoo requereix una base de dades robusta, amb PostgreSQL sent la opció recomanada.
 
-Per a la versió 16 d'Odoo, és important assegurar que totes les dependències requerides estiguin disponibles, incloent un entorn de Python adequat i llibreries específiques.
+Per a la versió 16 d'Odoo, és important assegurar que totes les dependències requerides estiguin disponibles, incloent-hi un entorn de Python adequat i llibreries específiques.
 
 #### Arquitectura de 2 Capes
 
@@ -483,7 +528,7 @@ La configuració amb Docker Compose assegura que aquesta comunicació sigui flui
 
 ### 3.2. Preparació del Fitxer docker-compose.yml
 
-Per aprofundir en el contingut específic de la secció "3.2. Preparació del Fitxer `docker-compose.yml`" de la teva formació en Docker Compose, centrarem-nos en la creació d'un fitxer `docker-compose.yml` per a la configuració d'Odoo 16 i PostgreSQL, incloent les definicions dels serveis, les variables d'entorn necessàries i la configuració dels volums per a la persistència de dades.
+Per aprofundir en el contingut específic de la secció "3.2. Preparació del Fitxer `docker-compose.yml`" de la teva formació en Docker Compose, centrarem-nos en la creació d'un fitxer `docker-compose.yml` per a la configuració d'Odoo 16 i PostgreSQL, incloent-hi les definicions dels serveis, les variables d'entorn necessàries i la configuració dels volums per a la persistència de dades.
 
 ### 3.2. Preparació del Fitxer `docker-compose.yml`
 

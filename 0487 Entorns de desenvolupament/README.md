@@ -4,10 +4,18 @@
 
 L'assignatura "Entorns de desenvolupament" cobreix diversos aspectes clau relacionats amb el procés de desenvolupament de software.
 
+## Resultats d'aprenentatge
+
+1. Reconeix els elements i eines que intervenen en el desenvolupament d'un programa informàtic, analitzant les seves característiques i les fases en les que actuan fins a arribar a la seva posició en funcionament.
+2. Avalua els entorns integrats de desenvolupament analitzant les seves característiques per editar codi font i generar executables.
+3. Verifica el funcionament de programes dissenyant i realitzant proves.
+4. Optimitza el codi empleant les eines disponibles a l'entorn de desenvolupament.
+5. Genera diagrames de classes valorant la seva importància en el desenvolupament d'aplicacions i emprant eines específiques.
+6. Genera diagrames de comportament valorant la seva importància en el desenvolupament d'aplicacions i emprant eines específiques.
+
 ## Unitats de treball
 
 Aquesta assignatura, "Entorns de desenvolupament", cobreix diversos aspectes clau relacionats amb el procés de desenvolupament de software. A continuació es proporciona un resum del contingut de cada tema:
-
 
 ### 1. Desenvolupament de software i algorítmia
 
